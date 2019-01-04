@@ -8,16 +8,20 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ErrorPageComponent } from './error-page/error-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { NavComponent } from './common/nav/nav.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { CoverComponent } from './common/cover/cover.component';
 
 @NgModule({
   // declare component related to this module
   declarations: [
     AppComponent,
     LandingPageComponent,
-    ErrorPageComponent,
-    MainPageComponent
+    MainPageComponent,
+    NavComponent,
+    FooterComponent,
+    CoverComponent
   ],
   // import other similar modules for use in this module
   imports: [
