@@ -10,25 +10,9 @@
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-
-    <!-- Clock -->
-    <script type="text/javascript">
-        function display() {
-            var refresh = 1000;
-            setTimeout('startTime()', refresh)
-        }
-
-        function startTime() {
-            var strcount
-            var date = new Date()
-            var clock = date.toLocaleString();
-            document.getElementById('clock').innerHTML = clock;
-            display();
-        }
-    </script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50" onload="startTime()">
+<body id="page-top" onload="startTime()">
     <app-root></app-root>
 
     <!-- Bootstrap core JavaScript-->

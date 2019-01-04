@@ -20,3 +20,16 @@ $(document).ready(function() {
         }
     });
 });
+
+function display() {
+    var refresh = 1000;
+    setTimeout('startTime()', refresh)
+}
+
+function startTime() {
+    var strcount
+    var date = new Date()
+    var clock = date.toLocaleString();
+    document.getElementById('clock').innerHTML = clock;
+    display();
+}

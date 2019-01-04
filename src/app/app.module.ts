@@ -7,11 +7,13 @@ import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { NavComponent } from './common/nav/nav.component';
+import { CoverComponent } from './common/cover/cover.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { NavComponent } from './common/nav/nav.component';
 import { FooterComponent } from './common/footer/footer.component';
-import { CoverComponent } from './common/cover/cover.component';
+
+import { FormatMonetPipe } from './shared/pipe/format-money.pipe';
 
 @NgModule({
   // declare component related to this module
@@ -21,7 +23,8 @@ import { CoverComponent } from './common/cover/cover.component';
     MainPageComponent,
     NavComponent,
     FooterComponent,
-    CoverComponent
+    CoverComponent,
+    FormatMonetPipe
   ],
   // import other similar modules for use in this module
   imports: [
