@@ -5,24 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Anest | Học viện lập trình</title>
+    <base href="/">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <title>Anest | Học viện lập trình</title>
-
+    <!-- Clock -->
     <script type="text/javascript">
-        function display_c() {
-            var refresh = 1000; // refresh rate in milli seconds
+        function display() {
+            var refresh = 1000;
             mytime = setTimeout('startTime()', refresh)
         }
 
         function startTime() {
             var strcount
-            var x = new Date()
-            var x1 = x.toLocaleString();
-            document.getElementById('clock').innerHTML = x1;
-            tt = display_c();
+            var date = new Date()
+            var clock = date.toLocaleString();
+            document.getElementById('clock').innerHTML = clock;
+            display();
         }
     </script>
 </head>

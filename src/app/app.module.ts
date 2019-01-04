@@ -8,20 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { ListCourseComponent } from './main-page/list-course/list-course.component';
-import { CourseDetailComponent } from './main-page/course-detail/course-detail.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
+  // declare component related to this module
   declarations: [
     AppComponent,
     LandingPageComponent,
-    MainPageComponent,
     ErrorPageComponent,
-    ListCourseComponent,
-    CourseDetailComponent
+    MainPageComponent
   ],
+  // import other similar modules for use in this module
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,7 +28,9 @@ import { CourseDetailComponent } from './main-page/course-detail/course-detail.c
       apiKey: 'AIzaSyB2LlIj3sk2akFpnpNcXzX9_NS08Xda1sE'
     })
   ],
+  // declare services to use for all of the above defined components
   providers: [],
+  // only for AppComponent
   bootstrap: [AppComponent]
 })
 export class AppModule { }
