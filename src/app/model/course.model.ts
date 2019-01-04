@@ -8,5 +8,4 @@ export class Course {
     contentSlot: any;
     price: number;
     idFaq: number;
-
 }
