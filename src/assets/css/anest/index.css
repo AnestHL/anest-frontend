@@ -1,0 +1,411 @@
+/*----- Hero content -----*/
+
+.hero-content-overlay {
+    background: rgba(0, 0, 0, .5);
+}
+
+.hero-content-wrap {
+    height: calc(100vh - 50px);
+}
+
+@media screen and (max-width: 576px) {
+    .hero-content-wrap {
+        height: calc(100vh - 50px);
+        padding-top: 115px;
+    }
+}
+
+.hero-content-wrap h4 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #03bb65;
+    letter-spacing: 0.1em;
+}
+
+.hero-content-wrap h1 {
+    margin-top: 15px;
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.hero-content-wrap p {
+    margin-top: 8px;
+    color: #fff;
+    line-height: 25px;
+}
+
+.hero-content-wrap .read-more {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 998px) {
+    .hero-content-wrap .read-more {
+        margin-top: 10px;
+    }
+}
+
+.hero-content-wrap .read-more a {
+    display: inline-block;
+    padding: 10px 40px;
+    border: 2px solid #03bb65;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content-wrap h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* ----- Section description ----- */
+
+#description {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#description .box {
+    padding: 0 5px;
+}
+
+#description .box i {
+    margin: 25px 0 20px;
+    color: #03bb65;
+}
+
+#description .box h4 {
+    margin-bottom: .75rem;
+}
+
+@media screen and (max-width: 768px) {
+    #description {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+}
+
+
+/* ----- Section category ----- */
+
+#category {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+#category .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 180px;
+}
+
+#category .card {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .05);
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #category {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #category .card {
+        margin: 1.25rem 5px 0;
+    }
+}
+
+
+/* ----- Section course-ready ----- */
+
+#course-ready {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#course-ready .media {
+    margin: 0 5px 1.5rem;
+}
+
+#course-ready .media img {
+    width: calc(50% - 50px);
+    height: 220px;
+}
+
+#course-ready .media .media-body {
+    border: 1px solid #e2e2e2;
+    height: 220px;
+}
+
+#course-ready .media .media-body .content {
+    padding: 12px 25px;
+    height: 180px;
+}
+
+#course-ready .media .media-body .content h5 {
+    color: #373737;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#course-ready .media .media-body .content p {
+    margin-bottom: 4px;
+}
+
+#course-ready .media .media-body .footer {
+    padding: 6px 25px;
+    height: 40px;
+    border-top: 1px solid #e2e2e2;
+}
+
+#course-ready .media .media-body .footer span {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#course-ready .media .media-body .footer span i {
+    color: #ffb71d;
+}
+
+#course-ready .media .media-body .footer small {
+    color: #03bb65;
+    font-size: 18px;
+    font-weight: 500;
+    float: right;
+}
+
+#course-ready .btn-more {
+    /* padding-top: 2rem; */
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #course-ready {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #course-ready .media {
+        margin: 1.5rem 5px 0;
+    }
+    #course-ready .media img {
+        display: none;
+    }
+    #course-ready .btn-more {
+        display: block;
+        padding-top: 2rem;
+    }
+}
+
+
+/* ----- Section course ----- */
+
+#course {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#course .card {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .05);
+    margin: 0 5px 10px;
+}
+
+#course .card .card-body {
+    padding: 1rem;
+}
+
+#course .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 220px;
+}
+
+#course .card .card-title {
+    color: #373737;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: .35rem;
+}
+
+#course .card .card-time {
+    font-size: 14px;
+    margin-bottom: .75rem;
+}
+
+#course .card .card-text {
+    font-size: 15px;
+    height: 145px;
+    vertical-align: middle;
+    display: table-cell;
+    padding-bottom: 10px;
+}
+
+#course .card .card-footer {
+    padding: .55rem 1rem;
+    background-color: transparent;
+    border-top: 1px solid rgb(239, 239, 239);
+}
+
+#course .card .card-footer span {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#course .card .card-footer span i {
+    color: #ffb71d;
+}
+
+#course .card .card-footer small {
+    color: #03bb65;
+    font-size: 18px;
+    font-weight: 500;
+    float: right;
+}
+
+.carousel-control-prev {
+    left: -120px;
+}
+
+.carousel-control-next {
+    right: -120px;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #ccc;
+}
+
+#course .btn-more {
+    /* padding-top: 3rem; */
+    display: none;
+}
+
+@media screen and (max-width: 998px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        margin: 0 3px 10px;
+    }
+    #course {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #course .card {
+        margin: 1.25rem 5px 0;
+    }
+    #course .card-img-top {
+        height: 200px;
+    }
+    #course .btn-more {
+        padding-top: 2rem;
+        display: block;
+    }
+}
+
+
+/* ----- Section faq ----- */
+
+#faq {
+    padding-top: 80px;
+    padding-bottom: 100px
+}
+
+#faq .accordion {
+    margin: 0 5px;
+}
+
+#faq a {
+    padding: 8px 15px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    color: #03bb65;
+}
+
+#faq a:hover {
+    text-decoration: none;
+}
+
+#faq .collapse-panel {
+    margin-bottom: 7px;
+}
+
+#faq .card {
+    border-radius: 0;
+}
+
+#faq .card-body {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+@media screen and (max-width: 768px) {
+    #faq {
+        padding-top: 40px;
+        padding-bottom: 50px
+    }
+}
+
+
+/* ----- Section contact ----- */
+
+#contact {
+    padding-top: 80px;
+    padding-bottom: 100px
+}
+
+#contact form {
+    margin: 0 5px;
+}
+
+#contact .input-group-text {
+    padding: .375rem .6rem;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    border-color: #03bb65;
+    box-shadow: 0 0 0 0.2rem rgba(3, 187, 101, 0.35);
+}
+
+#contact .input-group-text {
+    border-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        padding-top: 40px;
+        padding-bottom: 50px
+    }
+}
+
+
+/* ----- Section location ----- */
+
+#gmap {
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 1;
+}
