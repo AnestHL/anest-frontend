@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import { COURSEREADY } from '../mock/course-ready';
-import { COURSER } from '../mock/course';
-import { FAQ } from '../mock/faq';
+import { CourseReadyService } from '../service/course-ready/course-ready.service';
+import { CourseService } from '../service/course/course.service';
+import { FaqService } from '../service/faq/faq.service';
+
+import { CourseReady } from '../model/course-ready.model';
+import { Course } from '../model/course.model';
+import { Faq } from '../model/faq.model';
 
 @Component({
   selector: 'app-landing-page',
@@ -26,14 +30,31 @@ export class LandingPageComponent implements OnInit {
     image: 'advanced-course.jpg'
   }];
 
-  courseReady = COURSEREADY;
+  courseReady: CourseReady[];
+  courses: Course[];
+  faq: Faq[];
 
-  courses = COURSER;
-
-  faq = FAQ;
-
-  constructor() { }
+  constructor(
+    private _courseReadyService: CourseReadyService,
+    private _courseService: CourseService,
+    private _faqService: FaqService,
+  ) { }
 
   ngOnInit() {
+    this.getCourseReady();
+    this.getCourses();
+    this.getFaq();
+  }
+
+  getCourseReady(): void {
+    this._courseReadyService.getCourseReady().subscribe(courseReady => this.courseReady = courseReady);
+  }
+
+  getCourses(): void {
+    this._courseService.getCourses().subscribe(courses => this.courses = courses);
+  }
+
+  getFaq(): void {
+    this._faqService.getFaq().subscribe(faq => this.faq = faq);
   }
 }

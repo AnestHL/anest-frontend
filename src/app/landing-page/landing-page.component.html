@@ -159,7 +159,7 @@
                                         <i class="fas fa-star fa-sm"></i>
                                         <i class="far fa-star fa-sm"></i>
                                     </span>
-                                    <small>{{ course.price === 0 ? 'Miễn phí' : 'course.price' }}</small>
+                                    <small>{{ course.price === 0 ? 'Miễn phí' : course.price | formatMoney}}<sup *ngIf="course.price !== 0">đ</sup></small>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +184,7 @@
                                         <i class="fas fa-star fa-sm"></i>
                                         <i class="far fa-star fa-sm"></i>
                                     </span>
-                                    <small>{{ course.price === 0 ? 'Miễn phí' : 'course.price' }}</small>
+                                    <small>{{ course.price === 0 ? 'Miễn phí' : course.price | formatMoney}}<sup *ngIf="course.price !== 0">đ</sup></small>
                                 </div>
                             </div>
                         </div>

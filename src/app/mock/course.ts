@@ -1,6 +1,6 @@
 import { Course } from '../model/course.model';
 
-export const COURSER: Course[] = [{
+export const COURSES: Course[] = [{
     id: 1,
     course: 'Java Core Basic',
     totalSlot: 10,
