@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
     email: 'anest.studio@gmail.com',
     phone: '(+84) 0973 876 107',
     location: 'Thôn 9 - Tân Xã - Thạch Thất - Hà Nội'
-  }
+  };
 
   courses = [{
     id: 1,

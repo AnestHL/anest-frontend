@@ -1,8 +1,9 @@
-export class Course {
+export class CourseReady {
     id: number;
     course: string;
-    totalSlot: number;
-    shotDescription: string;
+    time: number;
+    numberStudent: number;
+    startAt: number;
     price: number;
     image: string;
     status: string;

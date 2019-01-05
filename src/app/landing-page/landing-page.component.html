@@ -78,24 +78,10 @@
         <div class="top-title"><i class="fas fa-search"></i></div>
         <h3 class="title"><span class="lg-f">B</span>ạn đang cần tìm?</h3>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-4">
+            <div class="col-12 col-sm-12 col-md-4" *ngFor="let category of categories">
                 <div class="card">
                     <a href="">
-                        <img src="assets/images/{{ categories['free-course'] }}" class="card-img-top" alt="free-course">
-                    </a>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-4">
-                <div class="card">
-                    <a href="">
-                        <img src="assets/images/{{ categories['basic-course'] }}" class="card-img-top" alt="basic-course">
-                    </a>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-4">
-                <div class="card">
-                    <a href="">
-                        <img src="assets/images/{{ categories['advanced-course'] }}" class="card-img-top" alt="advanced-course">
+                        <img src="assets/images/{{ category.image }}" class="card-img-top" alt="{{ category.image }}">
                     </a>
                 </div>
             </div>
@@ -119,7 +105,7 @@
                             <h5 class="mt-0">{{ course.course }}</h5>
                             <p>Thời gian: {{ course.time }} buổi</p>
                             <p>Số lượng: {{ course.numberStudent }} người</p>
-                            <p>Ngày bắt đầu: {{ course.startAt }}</p>
+                            <p>Ngày bắt đầu: {{ course.startAt*1000 | date: 'dd/MM/yyyy' }}</p>
                             <p>
                                 <a href="" class="btn btn-md btn-danger mt-2 mr-2">Đăng ký ngay</a>
                                 <a href="" class="btn btn-md btn-success mt-2">Chi tiết</a>
@@ -156,67 +142,24 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-4">
+                        <div class="col-12 col-sm-12 col-md-4" *ngFor="let course of courses | slice:0:3">
                             <div class="card">
-                                <img src="assets/images/c-git.jpg" class="card-img-top" alt="Git">
+                                <img src="assets/images/{{ course.image }}" class="card-img-top" alt="{{ course.image }}">
                                 <div class="card-body">
-                                    <h5 class="card-title">Làm việc với Git</h5>
-                                    <p class="card-time">Thời gian: 5 buổi</p>
-                                    <p class="card-text">Git là một công cụ quản lý source rất nổi tiếng hiện nay, thậm chí bây giờ các nhà tuyển dụng còn đưa Git vào giống như một tiêu chuẩn khi tuyển dụng, vì vậy việc nắm bắt công cụ này là điều cần thiết với các lập trình
-                                        viên hiện này.</p>
+                                    <h5 class="card-title">{{ course.course }}</h5>
+                                    <p class="card-time">Thời gian: {{ course.totalSlot }} buổi</p>
+                                    <p class="card-text">{{ course.shotDescription }}</p>
                                     <a href="" class="btn btn-md btn-success">Chi tiết</a>
                                 </div>
                                 <div class="card-footer">
                                     <span>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                  </span>
-                                    <small>Miễn phí</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-4">
-                            <div class="card">
-                                <img src="assets/images/v4.jpg" class="card-img-top" alt="Java Core Basic">
-                                <div class="card-body">
-                                    <h5 class="card-title">Java Core Basic</h5>
-                                    <p class="card-time">Thời gian: 15 buổi</p>
-                                    <p class="card-text">Nếu bạn đang muốn thiết kế áp phích, tờ rơi, tạp chí, báo và sách… đây chính là khoá học dành cho bạn...</p>
-                                    <a href="" class="btn btn-md btn-success">Chi tiết</a>
-                                </div>
-                                <div class="card-footer">
-                                    <span>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="far fa-star fa-sm"></i>
-                  </span>
-                                    <small>1.000.000<sup>đ</sup></small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-4">
-                            <div class="card">
-                                <img src="assets/images/v2.jpg" class="card-img-top" alt="Java Core Advanced">
-                                <div class="card-body">
-                                    <h5 class="card-title">Java Core Advanced</h5>
-                                    <p class="card-time">Thời gian: 15 buổi</p>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <a href="" class="btn btn-md btn-success">Chi tiết</a>
-                                </div>
-                                <div class="card-footer">
-                                    <span>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="far fa-star fa-sm"></i>
-                  </span>
-                                    <small>1.000.000<sup>đ</sup></small>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="far fa-star fa-sm"></i>
+                                    </span>
+                                    <small>{{ course.price === 0 ? 'Miễn phí' : 'course.price' }}</small>
                                 </div>
                             </div>
                         </div>
@@ -224,68 +167,24 @@
                 </div>
                 <div class="carousel-item">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-4">
+                        <div class="col-12 col-sm-12 col-md-4" *ngFor="let course of courses | slice:3:6">
                             <div class="card">
-                                <img src="assets/images/c-js.jpg" class="card-img-top" alt="Javascript Basic">
+                                <img src="assets/images/{{ course.image }}" class="card-img-top" alt="{{ course.image }}">
                                 <div class="card-body">
-                                    <h5 class="card-title">Javascript Basic</h5>
-                                    <p class="card-time">Thời gian: 5 buổi</p>
-                                    <p class="card-text">Javascript (JS) đang là một trong số các ngôn ngữ được yêu thích và phổ biến nhất trên thế giới. Nắm vững cơ bản về JS sẽ tạo cho bạn một nền tảng tốt cho lập trình web, bạn có thể trở thành fullstack developer với
-                                        JS và học các framework hot nhất hiện nay.</p>
+                                    <h5 class="card-title">{{ course.course }}</h5>
+                                    <p class="card-time">Thời gian: {{ course.totalSlot }} buổi</p>
+                                    <p class="card-text">{{ course.shotDescription }}</p>
                                     <a href="" class="btn btn-md btn-success">Chi tiết</a>
                                 </div>
                                 <div class="card-footer">
                                     <span>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="far fa-star fa-sm"></i>
-                  </span>
-                                    <small>1.000.000<sup>đ</sup></small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-4">
-                            <div class="card">
-                                <img src="assets/images/c-html.jpg" class="card-img-top" alt="HTML">
-                                <div class="card-body">
-                                    <h5 class="card-title">HMLT/CSS</h5>
-                                    <p class="card-time">Thời gian: 10 buổi</p>
-                                    <p class="card-text">Bạn muốn xây dựng nên một trang web đơn giản hay phức tạp đều không thể thiếu HTML/CSS. Khóa học này sẽ cung cấp cho bạn những kiến thức cơ bản, cần thiết nhất để bắt đầu trên con đường trở thành một lập trình viên
-                                        web chuyên nghiệp.</p>
-                                    <a href="" class="btn btn-md btn-success">Chi tiết</a>
-                                </div>
-                                <div class="card-footer">
-                                    <span>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="far fa-star fa-sm"></i>
-                  </span>
-                                    <small>1.000.000<sup>đ</sup></small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-4">
-                            <div class="card">
-                                <img src="assets/images/c-database.jpg" class="card-img-top" alt="Database">
-                                <div class="card-body">
-                                    <h5 class="card-title">Database</h5>
-                                    <p class="card-time">Thời gian: 10 buổi</p>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <a href="" class="btn btn-md btn-success">Chi tiết</a>
-                                </div>
-                                <div class="card-footer">
-                                    <span>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="fas fa-star fa-sm"></i>
-                    <i class="far fa-star fa-sm"></i>
-                  </span>
-                                    <small>1.000.000<sup>đ</sup></small>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                        <i class="far fa-star fa-sm"></i>
+                                    </span>
+                                    <small>{{ course.price === 0 ? 'Miễn phí' : 'course.price' }}</small>
                                 </div>
                             </div>
                         </div>
@@ -314,54 +213,13 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12">
                 <div class="accordion" id="accordion">
-                    <div class="collapse-panel">
-                        <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse2">
-              Đối tượng của ANEST là những ai?
-            </a>
-                        <div class="collapse" id="collapse-1" data-parent="#accordion">
+                    <div class="collapse-panel" *ngFor="let item of faq; let i = index">
+                        <a data-toggle="collapse" href="#collapse-{{ i }}" role="button" aria-expanded="false" aria-controls="collapse">
+                            {{ item.question }}
+                        </a>
+                        <div class="collapse" id="collapse-{{ i }}" data-parent="#accordion">
                             <div class="card card-body">
-                                ANEST có tất cả các khóa học dành cho mọi đối tượng, những người mới bắt đầu học lập trình, những người đã có kiến thức căn bản hay là những người muốn học để đi làm. Hãy liên hệ với ANEST để được tư vấn khóa học phù hợp nhất với bạn.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse-panel">
-                        <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse1">
-              Khi đi học cần chuẩn bị những gì?
-            </a>
-                        <div class="collapse" id="collapse-2" data-parent="#accordion">
-                            <div class="card card-body">
-                                Bạn chỉ cần chuẩn bị máy tính xách tay để thực hành code và giấy bút để ghi chép lại những kiến thức quan trọng.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse-panel">
-                        <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse2">
-              Nếu trong quá trình học có việc bận đột xuất thì có được học bù không?
-            </a>
-                        <div class="collapse" id="collapse-3" data-parent="#accordion">
-                            <div class="card card-body">
-                                Bạn hoàn toàn có thể đi học bù vào các lớp cùng khóa đang mở. Nếu không có lớp - ANEST sẽ sắp xếp mentor dạy bù riêng cho bạn vào thời gian thích hợp. Trong trường hợp bạn có việc phải nghỉ cả khóa học, bạn hoàn toàn có thể học lại khóa học đó hoàn toàn
-                                miễn phí. Ở ANEST - bạn chỉ cần bỏ tiền duy nhất cho một khóa học và có thể học lại bao nhiêu lần không giới hạn.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse-panel">
-                        <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse2">
-              Khi có câu hỏi hoặc thắc mắc liên quan đến bài học thì học viên sẽ được hỗ trợ qua kênh nào?
-            </a>
-                        <div class="collapse" id="collapse-4" data-parent="#accordion">
-                            <div class="card card-body">
-                                Bạn sẽ được hỗ trợ 24/7 qua các kênh online như facebook... hoặc được hỗ trợ trực tiếp tại trung tâm.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse-panel">
-                        <a data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse2">
-              Ngoài những khóa học đang có, trung tâm có dự định mở thêm những khóa học nào khác nữa không?
-            </a>
-                        <div class="collapse" id="collapse-5" data-parent="#accordion">
-                            <div class="card card-body">
-                                Ngoài những khóa đang giảng dạy, ANEST sẽ mở thêm các khóa học lập trình khác nếu học viên mong muốn và đủ số lượng mở lớp. ANEST luôn luôn lắng nghe các phản hồi và mong muốn của học viên để mang lại những trải nghiệm tốt nhất khi học tại ANEST.
+                                {{ item.answer }}
                             </div>
                         </div>
                     </div>

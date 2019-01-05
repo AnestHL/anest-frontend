@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { COURSEREADY } from '../mock/course-ready';
+import { COURSER } from '../mock/course';
+import { FAQ } from '../mock/faq';
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -8,49 +12,25 @@ import { Component, OnInit } from '@angular/core';
 
 export class LandingPageComponent implements OnInit {
 
-  categories = {
-    'free-course': 'free-course.jpg',
-    'basic-course': 'basic-course.jpg',
-    'advanced-course': 'advanced-course.jpg'
-  }
-
-  courseReady = [{
+  categories = [{
     id: 1,
-    course: 'Java Core Basic',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
-    price: 1000000,
-    image: 'e.jpg',
-    status: '1'
+    category: 'free course',
+    image: 'free-course.jpg'
   }, {
     id: 2,
-    course: 'Java Core Advanced',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
-    price: 1000000,
-    image: 'e.jpg',
-    status: '1'
+    category: 'basic course',
+    image: 'basic-course.jpg'
   }, {
     id: 3,
-    course: 'HTML/CSS',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
-    price: 1000000,
-    image: 'c-html.jpg',
-    status: '1'
-  }, {
-    id: 4,
-    course: 'Angular',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
-    price: 1000000,
-    image: 'e.jpg',
-    status: '1'
-  }]
+    category: 'advanced course',
+    image: 'advanced-course.jpg'
+  }];
+
+  courseReady = COURSEREADY;
+
+  courses = COURSER;
+
+  faq = FAQ;
 
   constructor() { }
 
