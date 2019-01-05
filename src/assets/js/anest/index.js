@@ -20,3 +20,14 @@ $(document).ready(function() {
         }
     });
 });
+
+function display_c() {
+    setTimeout('startTime()', 1000);
+}
+
+function startTime() {
+    var date = new Date()
+    var time = date.toLocaleString();
+    document.getElementById('clock').innerHTML = time;
+    display_c();
+}
