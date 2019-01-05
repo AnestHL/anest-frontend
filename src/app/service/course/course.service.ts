@@ -19,8 +19,8 @@ export class CourseService {
 
   constructor(private _http: HttpClient) { }
 
-   /** GET courses from the server */
-   getCourses(): Observable<Course[]> {
+  /** GET courses from the server */
+  getCourses(): Observable<Course[]> {
     return this._http.get<Course[]>(this.url)
       .pipe(
         tap(_ => console.log('fetched courses')),

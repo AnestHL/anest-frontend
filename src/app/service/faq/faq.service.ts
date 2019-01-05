@@ -15,8 +15,8 @@ export class FaqService {
 
   constructor(private _http: HttpClient) { }
 
-   /** GET faq from the server */
-   getFaq(): Observable<Faq[]> {
+  /** GET faq from the server */
+  getFaq(): Observable<Faq[]> {
     return this._http.get<Faq[]>(this.url)
       .pipe(
         tap(_ => console.log('fetched faq')),
