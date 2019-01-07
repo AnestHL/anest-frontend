@@ -12,6 +12,7 @@ import { Faq } from 'src/app/model/faq.model';
 export class FaqService {
 
   private url = 'api/faq';  // URL to web api
+  private realUrl = 'https://anest-hl-backend.herokuapp.com/faq/0';
 
   constructor(private _http: HttpClient) { }
 

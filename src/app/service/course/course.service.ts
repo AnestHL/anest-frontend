@@ -16,6 +16,7 @@ const httpOptions = {
 export class CourseService {
 
   private url = 'api/courses';  // URL to web api
+  private realUrl = 'https://anest-hl-backend.herokuapp.com/course/all';
 
   constructor(private _http: HttpClient) { }
 
