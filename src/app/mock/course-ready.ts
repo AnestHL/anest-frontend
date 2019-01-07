@@ -2,38 +2,46 @@ import { CourseReady } from '../model/course-ready.model';
 
 export const COURSEREADY: CourseReady[] = [{
     id: 1,
-    course: 'Java Core Basic',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
+    courseName: 'Java Core Basic',
+    totalSlot: 10,
+    totalStudent: 30,
+    description: '',
     price: 1000000,
-    image: 'e.jpg',
-    status: '1'
+    startAt: 1551571200,
+    timeTable: '',
+    image: 'c-js-v.jpg',
+    status: 1
 }, {
     id: 2,
-    course: 'Java Core Advanced',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
+    courseName: 'Java Core Advanced',
+    totalSlot: 10,
+    totalStudent: 30,
+    description: '',
     price: 1000000,
-    image: 'e.jpg',
-    status: '1'
+    startAt: 1551571200,
+    timeTable: '',
+    image: 'c-js-v.jpg',
+    status: 1
 }, {
     id: 3,
-    course: 'HTML/CSS',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
+    courseName: 'HTML/CSS',
+    totalSlot: 10,
+    totalStudent: 30,
+    description: '',
     price: 1000000,
-    image: 'c-html.jpg',
-    status: '1'
+    startAt: 1551571200,
+    timeTable: '',
+    image: 'c-html-v.jpg',
+    status: 1
 }, {
     id: 4,
-    course: 'Angular',
-    time: 10,
-    numberStudent: 30,
-    startAt: 1551571200,
+    courseName: 'Angular',
+    totalSlot: 10,
+    totalStudent: 30,
+    description: '',
     price: 1000000,
-    image: 'e.jpg',
-    status: '1'
+    startAt: 1551571200,
+    timeTable: '',
+    image: 'c-js-v.jpg',
+    status: 1
 }];

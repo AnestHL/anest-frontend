@@ -1,9 +1,11 @@
 export class Course {
     id: number;
-    course: string;
+    courseName: string;
     totalSlot: number;
-    shotDescription: string;
+    shortDescription: string;
+    description: string;
+    benefit: string;
     price: number;
     image: string;
-    status: string;
+    status: number;
 }

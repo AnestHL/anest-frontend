@@ -1,51 +1,51 @@
 <div id="footer">
-    <div class="container">
-        <div class="row f-top">
-            <div class="col-12 col-sm-12 col-md-4 info">
-                <img src="assets/images/cover/logo.png">
-                <p>Học viện lập trình</p>
-                <ul>
-                    <li><i class="far fa-envelope fa-fw mr-1"></i>{{ info.email }}</li>
-                    <li><i class="fas fa-phone fa-fw mr-1"></i>{{ info.phone }}</li>
-                    <li><i class="fas fa-map-marker-alt fa-fw mr-1"></i>{{ info.location }}</li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-12 col-md-4 course">
-                <h6>KHÓA HỌC</h6>
-                <p>Các khóa học lập trình sẵn sàng</p>
-                <ul>
-                    <li *ngFor="let course of courses">{{ course.name }}</li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-12 col-md-4 social">
-                <h6>FOLLOW US</h6>
-                <p>Cập nhật những tin tức - khuyễn mãi nhanh nhất</p>
-                <ul>
-                    <li>
-                        <a href="{{ linkFacebook }}">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="{{ linkYoutube }}">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="btn btn-lg btn-success mt-4"><i class="fas fa-edit fa-fw mr-1"></i>Đăng ký học</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row f-top">
+      <div class="col-12 col-sm-12 col-md-4 info">
+        <img src="assets/images/cover/logo.png">
+        <p>Học viện lập trình</p>
+        <ul>
+          <li><i class="far fa-envelope fa-fw mr-1"></i>{{ info.email }}</li>
+          <li><i class="fas fa-phone fa-fw mr-1"></i>{{ info.phone }}</li>
+          <li><i class="fas fa-map-marker-alt fa-fw mr-1"></i>{{ info.location }}</li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 course">
+        <h6>KHÓA HỌC</h6>
+        <p>Các khóa học lập trình sẵn sàng</p>
+        <ul>
+          <li *ngFor="let course of courses">{{ course.name }}</li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 social">
+        <h6>FOLLOW US</h6>
+        <p>Cập nhật những tin tức - khuyễn mãi nhanh nhất</p>
+        <ul>
+          <li>
+            <a href="{{ linkFacebook }}">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="{{ linkYoutube }}">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" class="btn btn-lg btn-success mt-4"><i class="fas fa-edit fa-fw mr-1"></i>Đăng ký học</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 <div id="signature">
-    <div class="container">
-        <div class="row f-bot">
-            <div class="col-12 col-sm-12 col-md-6">
-                <i class="far fa-clock fa-fw mr-1"></i><span id=clock></span>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 copyright">
-                <span>Copyright © 2019 ANEST - Học viện lập trình</span>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row f-bot">
+      <div class="col-12 col-sm-12 col-md-6">
+        <i class="far fa-clock fa-fw mr-1"></i><span id=clock></span>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 copyright">
+        <span>Copyright © 2019 ANEST - Học viện lập trình</span>
+      </div>
     </div>
+  </div>
 </div>

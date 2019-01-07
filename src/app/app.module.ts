@@ -15,9 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 // component
 import { AppComponent } from './app.component';
 import { NavComponent } from './common/nav/nav.component';
+import { CoverLandingComponent } from './common/cover-landing/cover-landing.component';
 import { CoverComponent } from './common/cover/cover.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { AboutComponent } from './common/modal/about/about.component';
+import { LogoutComponent } from './common/modal/logout/logout.component';
 
 // other
 import { FormatMonetPipe } from './shared/pipe/format-money.pipe';
@@ -30,7 +33,10 @@ import { FormatMonetPipe } from './shared/pipe/format-money.pipe';
     NavComponent,
     FooterComponent,
     CoverComponent,
-    FormatMonetPipe
+    FormatMonetPipe,
+    AboutComponent,
+    LogoutComponent,
+    CoverLandingComponent
   ],
   // import other similar modules for use in this module
   imports: [

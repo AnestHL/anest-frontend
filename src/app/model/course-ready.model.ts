@@ -1,10 +1,12 @@
 export class CourseReady {
     id: number;
-    course: string;
-    time: number;
-    numberStudent: number;
+    courseName: string;
+    totalSlot: number;
+    description: string;
+    price: number;         // end course attribute
+    totalStudent: number;
     startAt: number;
-    price: number;
+    timeTable: string;
     image: string;
-    status: string;
+    status: number;
 }
