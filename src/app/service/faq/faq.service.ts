@@ -18,7 +18,7 @@ export class FaqService {
 
   /** GET faq from the server */
   getFaq(): Observable<Faq[]> {
-    return this._http.get<Faq[]>(this.url)
+    return this._http.get<Faq[]>(this.realUrl)
       .pipe(
         tap(_ => console.log('fetched faq')),
         catchError(this.handleError('getFaq', []))

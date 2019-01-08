@@ -22,7 +22,7 @@ export class CourseService {
 
   /** GET courses from the server */
   getCourses(): Observable<Course[]> {
-    return this._http.get<Course[]>(this.url)
+    return this._http.get<Course[]>(this.realUrl)
       .pipe(
         tap(_ => console.log('fetched courses')),
         catchError(this.handleError('getCourses', []))
