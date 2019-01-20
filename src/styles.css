@@ -1,339 +1,337 @@
-
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~ng2-slim-loading-bar/style.css";
-
 @font-face {
-    font-family: SourceSansPro;
-    src: url(assets/fonts/SourceSansPro.otf);
+  font-family: SourceSansPro;
+  src: url(assets/fonts/SourceSansPro.otf);
 }
 
 body {
-    font-size: 15px;
-    font-family: SourceSansPro;
-    letter-spacing: .015rem;
+  font-size: 15px;
+  font-family: SourceSansPro;
+  letter-spacing: .015rem;
 }
 
 .bg-color {
-    background: #f7f7f7;
+  background: #f7f7f7;
 }
 
 .hero-content {
-    /* background: url('../../images/cover/hero-bg.jpg'); */
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
+  /* background: url('../../images/cover/hero-bg.jpg'); */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
 }
 
 .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
 }
 
 
 /*----- Top bar -----*/
 
 .top-header-bar {
-    background: transparent;
-    font-size: 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 992px) {
-    .top-left {
-        display: none;
-    }
-    .top-right {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  .top-left {
+    display: none;
+  }
+  .top-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .top-header-bar .container ul .icon-size {
-    width: 39px;
+  width: 39px;
 }
 
 .top-header-bar .container ul {
-    margin-bottom: 0;
-    padding: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .top-header-bar .container ul li {
-    float: right;
-    list-style: none;
+  float: right;
+  list-style: none;
 }
 
 .top-header-bar .container ul li a {
-    color: #fff;
-    padding: 8px 15px;
-    display: block;
-    font-size: 14px;
+  color: #fff;
+  padding: 8px 15px;
+  display: block;
+  font-size: 14px;
 }
 
 .top-header-bar .container ul.float-left li a {
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .top-header-bar .container ul li a:hover {
-    color: #03bb65;
-    text-decoration: none;
+  color: #03bb65;
+  text-decoration: none;
 }
 
 .flex {
-    display: flex !important;
+  display: flex !important;
 }
 
 
 /*----- Nav bar -----*/
 
 .nav-bar {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .site-title {
-    margin: 0;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 1;
-    text-align: left !important;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left !important;
 }
 
 .site-title a img {
-    height: 48px;
+  height: 48px;
 }
 
 .site-navigation.show ul {
-    left: 0;
+  left: 0;
 }
 
 .site-navigation ul {
-    margin: 0;
-    list-style: none;
-    position: fixed;
-    top: 0;
-    left: -320px;
-    width: 250px;
-    height: 100%;
-    overflow-x: hidden;
-    padding: 30px 15px;
-    background: rgba(0, 0, 0, .95);
-    transition: all 0.35s;
+  margin: 0;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 250px;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 30px 15px;
+  background: rgba(0, 0, 0, .95);
+  transition: all 0.35s;
 }
 
 @media screen and (min-width: 992px) {
-    .site-navigation ul {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        overflow: auto;
-        background: transparent;
-    }
+  .site-navigation ul {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: auto;
+    background: transparent;
+  }
 }
 
 .hamburger-menu {
-    position: relative;
-    margin: 0 auto;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    margin-top: 14px;
+  position: relative;
+  margin: 0 auto;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  margin-top: 14px;
 }
 
 .hamburger-menu .icon-bar {
-    display: block;
-    height: 2px;
-    border-radius: 1px;
-    background-color: #e6e6e6;
-    width: 35px;
-    transition: all 0.25s ease;
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #e6e6e6;
+  width: 35px;
+  transition: all 0.25s ease;
 }
 
 .hamburger-menu .icon-bar+.icon-bar {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .hamburger-menu .icon-bar:nth-child(1) {
-    transform: rotate(-45deg);
-    transform-origin: 90% 10%;
+  transform: rotate(-45deg);
+  transform-origin: 90% 10%;
 }
 
 .hamburger-menu .icon-bar:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .hamburger-menu.rotate .icon-bar:nth-child(1) {
-    transform: none;
+  transform: none;
 }
 
 .hamburger-menu.rotate .icon-bar:nth-child(2) {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hamburger-menu.rotate .icon-bar:nth-child(3) {
-    transform: none;
+  transform: none;
 }
 
 .hamburger-menu .icon-bar:nth-child(3) {
-    transform: rotate(45deg);
-    transform-origin: 90% 10%;
+  transform: rotate(45deg);
+  transform-origin: 90% 10%;
 }
 
 .site-navigation ul li a:hover,
 .site-navigation ul li.active a {
-    color: #03bb65;
+  color: #03bb65;
 }
 
 .site-navigation ul li a {
-    font-size: 15px;
-    display: block;
-    padding: 13px 15px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1px;
+  font-size: 15px;
+  display: block;
+  padding: 13px 15px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 
 /* ----- Section sub nav ----- */
 
 #sub-nav .bg-dark {
-    background-color: #232323 !important;
+  background-color: #232323 !important;
 }
 
 #sub-nav img {
-    height: 34px;
-    display: none;
+  height: 34px;
+  display: none;
 }
 
 #sub-nav .nav-link {
-    padding: .375rem 1rem;
+  padding: .375rem 1rem;
 }
 
 #sub-nav .show-img {
-    display: block;
+  display: block;
 }
 
 #sub-nav .navbar-dark .navbar-toggler {
-    border-color: transparent;
+  border-color: transparent;
 }
 
 #sub-nav .navbar-dark .navbar-toggler:focus,
 #sub-nav .navbar-dark .navbar-toggler:target {
-    outline: none;
+  outline: none;
 }
 
 #sub-nav .navbar-toggler {
-    padding: 0.063rem 0;
+  padding: 0.063rem 0;
 }
 
 #sub-nav .navbar-nav {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #sub-nav .ml {
-    margin-left: auto;
-    margin-right: inherit;
+  margin-left: auto;
+  margin-right: inherit;
 }
 
 
 /* ----- Section title ----- */
 
 .top-title {
-    border-bottom: 4px solid #03bb65;
-    width: 65px;
-    margin-left: 5px;
-    margin-bottom: 10px;
+  border-bottom: 4px solid #03bb65;
+  width: 65px;
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 
 .top-title i {
-    font-size: 24px;
-    color: #03bb65;
-    margin-left: 5px;
-    margin-bottom: 5px;
+  font-size: 24px;
+  color: #03bb65;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 .title {
-    color: #373737;
-    font-weight: 800;
-    font-size: 26px;
-    margin: 0 2px 30px;
+  color: #373737;
+  font-weight: 800;
+  font-size: 26px;
+  margin: 0 2px 30px;
 }
 
 .title a {
-    float: right;
-    margin-right: 3px;
+  float: right;
+  margin-right: 3px;
 }
 
 .title .lg-f {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 @media screen and (max-width: 768px) {
-    .title a {
-        display: none;
-    }
+  .title a {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .title {
-        font-size: 21px;
-    }
+  .title {
+    font-size: 21px;
+  }
 }
 
 
 /* ----- Scroll bar----- */
 
 #page-top::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 8px #fff;
-    background-color: #fff;
-    border-radius: 0;
+  -webkit-box-shadow: inset 0 0 8px #fff;
+  background-color: #fff;
+  border-radius: 0;
 }
 
 #page-top::-webkit-scrollbar {
-    width: 8px;
-    background-color: #fff;
+  width: 8px;
+  background-color: #fff;
 }
 
 #page-top::-webkit-scrollbar-thumb {
-    background-color: #d1d1d1;
-    border-radius: 0;
+  background-color: #d1d1d1;
+  border-radius: 0;
 }
 
 
 /* ----- Button scroll to top ----- */
 
 .scroll-to-top {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    display: none;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.35);
-    line-height: 38px;
-    font-size: 22px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  line-height: 38px;
+  font-size: 22px;
 }
 
 .scroll-to-top:focus,
 .scroll-to-top:hover {
-    color: white;
+  color: white;
 }
 
 .scroll-to-top:hover {
-    background: #343a40;
+  background: #343a40;
 }
 
 .scroll-to-top i {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 
@@ -343,107 +341,107 @@ body {
 /* ----- Modal ----- */
 
 .modal-header {
-    border-bottom: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .modal-body {
-    padding: 1rem 1rem 0;
+  padding: 1rem 1rem 0;
 }
 
 .modal-content {
-    border-radius: .2rem;
+  border-radius: .2rem;
 }
 
 .modal-footer {
-    border-top: 1px solid transparent;
+  border-top: 1px solid transparent;
 }
 
 .modal-header .close {
-    padding: .5rem .8rem;
+  padding: .5rem .8rem;
 }
 
 .modal-body h4 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #000;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #000;
 }
 
 @media (min-width: 576px) {
-    #logoutModal .modal-dialog {
-        max-width: 500px;
-    }
+  #logoutModal .modal-dialog {
+    max-width: 500px;
+  }
 }
 
 
 /* ----- About modal ----- */
 
 #aboutModal .modal-header {
-    border-bottom: 1px solid #dadada;
-    padding: .75rem 1rem;
+  border-bottom: 1px solid #dadada;
+  padding: .75rem 1rem;
 }
 
 #aboutModal .modal-header .close {
-    padding: .75rem .8rem;
+  padding: .75rem .8rem;
 }
 
 #aboutModal .modal-header h4 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 #aboutModal .modal-body p {
-    line-height: 25px;
+  line-height: 25px;
 }
 
 #aboutModal .modal-body p i {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 #aboutModal .modal-body p span {
-    color: #03bb65;
+  color: #03bb65;
 }
 
 @media screen and (max-width: 576px) {
-    #aboutModal .modal-body {
-        max-height: 300px;
-        overflow-y: auto;
-    }
+  #aboutModal .modal-body {
+    max-height: 300px;
+    overflow-y: auto;
+  }
 }
 
 
 /* ----- Button ----- */
 
 .btn {
-    line-height: 1.5;
-    border-radius: 2px;
+  line-height: 1.5;
+  border-radius: 2px;
 }
 
 .btn-sm {
-    font-size: .85rem;
-    padding: .275rem .9rem;
+  font-size: .85rem;
+  padding: .275rem .9rem;
 }
 
 .btn-md {
-    font-size: .95rem;
-    padding: .3rem 1.2rem;
+  font-size: .95rem;
+  padding: .3rem 1.2rem;
 }
 
 .btn-lg {
-    font-size: 1rem;
-    padding: .4rem 1.5rem .5rem;
+  font-size: 1rem;
+  padding: .4rem 1.5rem .5rem;
 }
 
 .btn-white {
-    background-color: #fff;
-    border: 1px solid #cccccc;
+  background-color: #fff;
+  border: 1px solid #cccccc;
 }
 
 .btn-success {
-    color: #fff;
-    background-color: #03bb65;
-    border-color: #03bb65;
+  color: #fff;
+  background-color: #03bb65;
+  border-color: #03bb65;
 }
 
 .btn-success:hover {
-    background-color: #19c880;
-    border-color: #19c880;
+  background-color: #19c880;
+  border-color: #19c880;
 }
