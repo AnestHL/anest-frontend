@@ -12,13 +12,14 @@ import { CourseReady } from 'src/app/model/course-ready.model';
 export class CourseReadyService {
 
   private url = 'api/courseready';  // URL to web api
+  private localUrl = 'http://localhost:8080/course-ready/all';
   private realUrl = 'https://anest-hl-backend.herokuapp.com/course-ready/all';
 
   constructor(private _http: HttpClient) { }
 
   /** GET course ready from the server */
   getCourseReady(): Observable<CourseReady[]> {
-    return this._http.get<CourseReady[]>(this.realUrl)
+    return this._http.get<CourseReady[]>(this.localUrl)
       .pipe(
         tap(_ => console.log('fetched course ready')),
         catchError(this.handleError('getCourseReady', []))

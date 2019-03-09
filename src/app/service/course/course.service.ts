@@ -16,13 +16,14 @@ const httpOptions = {
 export class CourseService {
 
   private url = 'api/courses';  // URL to web api
+  private localUrl = 'http://localhost:8080/course/all';
   private realUrl = 'https://anest-hl-backend.herokuapp.com/course/all';
 
   constructor(private _http: HttpClient) { }
 
   /** GET courses from the server */
   getCourses(): Observable<Course[]> {
-    return this._http.get<Course[]>(this.realUrl)
+    return this._http.get<Course[]>(this.localUrl)
       .pipe(
         tap(_ => console.log('fetched courses')),
         catchError(this.handleError('getCourses', []))

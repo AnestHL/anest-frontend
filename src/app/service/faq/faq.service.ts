@@ -12,13 +12,14 @@ import { Faq } from 'src/app/model/faq.model';
 export class FaqService {
 
   private url = 'api/faq';  // URL to web api
+  private localUrl = 'http://localhost:8080/faq/0';
   private realUrl = 'https://anest-hl-backend.herokuapp.com/faq/0';
 
   constructor(private _http: HttpClient) { }
 
   /** GET faq from the server */
   getFaq(): Observable<Faq[]> {
-    return this._http.get<Faq[]>(this.realUrl)
+    return this._http.get<Faq[]>(this.localUrl)
       .pipe(
         tap(_ => console.log('fetched faq')),
         catchError(this.handleError('getFaq', []))

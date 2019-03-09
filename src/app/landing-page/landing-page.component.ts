@@ -34,6 +34,8 @@ export class LandingPageComponent implements OnInit {
   courses: Course[];
   faq: Faq[];
 
+  temp = [];
+
   constructor(
     private _courseReadyService: CourseReadyService,
     private _courseService: CourseService,
@@ -44,6 +46,12 @@ export class LandingPageComponent implements OnInit {
     this.getCourseReady();
     this.getCourses();
     this.getFaq();
+    //this.merge();
+  }
+
+  merge(): void {
+    this.temp = Object.assign(this.courses, this.courseReady);
+    console.log(this.temp);
   }
 
   getCourseReady(): void {
